@@ -9,16 +9,6 @@ type StoreItemProps = {
   imgUrl: string;
 };
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
-  const [numOfItems, setNumOfItems] = useState(1);
-  const plusbtn = () => {
-    setNumOfItems((prev) => prev + 1);
-  };
-  const minusbtn = () => {
-    setNumOfItems((prev) => prev - 1);
-  };
-  const handleCLick = () => {
-    return quantity + 1;
-  };
   const quantity = 1;
   console.log(quantity);
   return (
@@ -37,16 +27,25 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           </Card.Title>
           <div className="mt-auto">
             {quantity === 0 ? (
-              <Button onClick={() => alert("yooo")} className="w-100">
-                {" "}
-                + Add to cart
-              </Button>
+              <Button className="w-100"> + Add to cart</Button>
             ) : (
               <div
                 className="d-flex align-items-center flex-column"
                 style={{ gap: ".5rem" }}
               >
-                hi
+                <div
+                  className="d-flex align-items-center"
+                  style={{ gap: ".5rem" }}
+                >
+                  <Button>+</Button>
+                  <div>
+                    <span className="fs-3">{quantity}</span> in cart
+                  </div>
+                  <Button>-</Button>
+                </div>
+                <Button variant="danger" size="sm">
+                  Remove
+                </Button>
               </div>
             )}
           </div>
