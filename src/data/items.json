@@ -1,26 +1,38 @@
 [
   {
     "id": 1,
-    "name": "book",
-    "price": 10.9,
-    "imgUrl": "/imgs/book.jpeg"
+    "name": "Gibson Les Paul Standard",
+    "price": 2499.99,
+    "imgUrl": "/imgs/gibson.avif"
   },
   {
-    "id": 1,
-    "name": "computer",
-    "price": 999,
-    "imgUrl": "/imgs/computer.jpeg"
+    "id": 2,
+    "name": "Fender Stratocaster",
+    "price": 1999.99,
+    "imgUrl": "/imgs/strat.avif"
   },
   {
-    "id": 1,
-    "name": "banana",
-    "price": 1.9,
-    "imgUrl": "/imgs/banana.jpeg"
+    "id": 3,
+    "name": "Yamaha Grand Piano",
+    "price": 8999.99,
+    "imgUrl": "/imgs/grand.avif"
   },
   {
-    "id": 1,
-    "name": "car",
-    "price": 2000000,
-    "imgUrl": "/imgs/car.jpeg"
+    "id": 4,
+    "name": "Roland Electronic Drum Kit",
+    "price": 1499.99,
+    "imgUrl": "/imgs/roland.avif"
+  },
+  {
+    "id": 5,
+    "name": "Fender Precision Bass",
+    "price": 1499.99,
+    "imgUrl": "/imgs/bass.avif"
+  },
+  {
+    "id": 6,
+    "name": "Mini moog Modal D",
+    "price": 2499.99,
+    "imgUrl": "/imgs/moog.avif"
   }
 ]
