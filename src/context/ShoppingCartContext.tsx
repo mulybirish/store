@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import { NavItem } from "react-bootstrap";
-import { ShoppingCart } from "../components/ShoppingCart";
+import { ShoppingCart } from "../components/shoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type ShoppingCartProviderProps = {
