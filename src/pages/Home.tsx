@@ -3,16 +3,13 @@ export function Home() {
     <>
       <div>Home</div>
       <div className="jumbotron">
-        <h1 className="display-4">Hello, world!</h1>
+        <h1 className="display-4">We love gear</h1>
         <p className="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          Welcome to the best music store! where you can find exclusive music
+          gear from drum machines to pianos picked by out professionals
         </p>
         <hr className="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
+        <p>Take a look at our store, we are sure youll find a gear you love</p>
         <p className="lead">
           <a className="btn btn-primary btn-lg" href="#" role="button">
             Learn more
