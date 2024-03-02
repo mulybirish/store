@@ -9,6 +9,7 @@ export function Home() {
       <div className="row">
         <div className="col-md-6">
           <h1>Welcome to Our Music Gear Store</h1>
+          <h1>Welcome to Our Music Gear Store</h1>
 
           <p className="lead">
             Explore our extensive collection of high-quality music gear, curated
