@@ -4,6 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { Store } from "./Store";
 
 export function Home() {
+  // fetch("http://localhost:8800/products")
+  //   .then((res) => {
+  //     return res.json();
+  //   })
+  //   .then((data) => {
+  //     console.log(data);
+  //   });
   return (
     <Container className="mt-5">
       <div className="row">

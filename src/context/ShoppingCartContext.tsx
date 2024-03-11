@@ -1,4 +1,11 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import axios from "axios";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useState,
+  useEffect,
+} from "react";
 import { NavItem } from "react-bootstrap";
 import { ShoppingCart } from "../components/shoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
@@ -15,10 +22,19 @@ type ShoppingCartContextProps = {
   removeFromCart: (id: number) => void;
   cartQuantity: number;
   cartItems: CartItem[];
+  products: ProductType[];
 };
 type CartItem = {
   id: number;
   quantity: number;
+};
+
+type ProductType = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextProps);
@@ -31,6 +47,16 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     []
   );
   const [isOpen, setIsOpen] = useState(false);
+  const [products, setProducts] = useState<ProductType[]>([]);
+  useEffect(() => {
+    const fetchAllProducts = async () => {
+      const response = await axios.get("http://localhost:8800/products");
+      const data = await response.data;
+      setProducts(data);
+      console.log(data);
+    };
+    fetchAllProducts();
+  }, []);
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
@@ -93,6 +119,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         closeCart,
         cartItems,
         cartQuantity,
+        products,
       }}
     >
       {children}

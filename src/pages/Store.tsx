@@ -1,23 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
 import storeItems from "../data/items.json";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { ChangeEvent, ReactEventHandler } from "react";
 
+type ProductType = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  image: string;
+};
 export function Store() {
   const [textInput, setTetInput] = useState("");
+  const { products } = useShoppingCart();
+
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const value = e.target.value;
     setTetInput(value);
     // console.log();
   };
-  const filteredItems = storeItems.filter((item) => {
-    return item.name.toLowerCase().includes(textInput.toLowerCase());
+  const filteredItems = products.filter((item) => {
+    return item.title.toLowerCase().includes(textInput.toLowerCase());
   });
-  console.log(filteredItems);
-  // console.log(textInput);
+  console.log(products);
+  // console.log(textInput);ךד
   return (
     <>
       <h1>Store</h1>
