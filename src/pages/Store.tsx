@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
-import storeItems from "../data/items.json";
+// import storeItems from "../data/items.json";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { ChangeEvent, ReactEventHandler } from "react";
 

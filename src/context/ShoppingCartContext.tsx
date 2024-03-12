@@ -29,7 +29,7 @@ type CartItem = {
   quantity: number;
 };
 
-type ProductType = {
+export type ProductType = {
   id: number;
   title: string;
   description: string;
@@ -50,10 +50,15 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [products, setProducts] = useState<ProductType[]>([]);
   useEffect(() => {
     const fetchAllProducts = async () => {
-      const response = await axios.get("http://localhost:8800/products");
-      const data = await response.data;
-      setProducts(data);
-      console.log(data);
+      try {
+        const response = await axios.get("http://localhost:8800/products");
+        const data = await response.data;
+
+        setProducts(data);
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
     };
     fetchAllProducts();
   }, []);

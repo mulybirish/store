@@ -1,7 +1,8 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import StoreItems from "../data/items.json";
+// import StoreItems from "../data/items.json";
 import { Stack, Button } from "react-bootstrap";
 import { formatCurrency } from "../utilities/formatCurrency";
+import { ProductType } from "../context/ShoppingCartContext";
 type CartItemProps = {
   id: number;
   quantity: number;
@@ -14,20 +15,20 @@ type Item = {
 };
 
 export function CartItem({ id, quantity }: CartItemProps) {
-  const { removeFromCart } = useShoppingCart();
-  const item = StoreItems.find((item) => item.id === id) as Item;
+  const { products, removeFromCart } = useShoppingCart();
+  const item = products.find((item) => item.id === id) as ProductType;
   if (item === null) return null;
 
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img
         style={{ objectFit: "cover", width: "125px", height: "75px" }}
-        src={item?.imgUrl}
-        alt={`Image of` + item?.name}
+        src={item?.image}
+        alt={`Image of` + item?.title}
       />
       <div className="me-auto">
         <div>
-          {item.name}{" "}
+          {item.title}{" "}
           {quantity > 1 && (
             <span className="text-muted" style={{ fontSize: ".65rem" }}>
               &times;{quantity}
