@@ -14,7 +14,7 @@ type ProductType = {
 };
 export function Store() {
   const [textInput, setTetInput] = useState("");
-  const { products } = useShoppingCart();
+  const { products, openCart } = useShoppingCart();
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
