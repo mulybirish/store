@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Acoustic Guitar",
+    "description": "A high-quality acoustic guitar with a rich, warm tone. Perfect for beginners and professionals alike.",
+    "price": 199.99,
+    "image": "https://example.com/images/acoustic-guitar.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Electric Keyboard",
+    "description": "A versatile electric keyboard with 61 keys, perfect for home or stage performances.",
+    "price": 299.99,
+    "image": "https://example.com/images/electric-keyboard.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Drum Set",
+    "description": "A complete 5-piece drum set with cymbals and drumsticks included. Ideal for drummers of all skill levels.",
+    "price": 499.99,
+    "image": "https://example.com/images/drum-set.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Electric Guitar",
+    "description": "A sleek and stylish electric guitar with a maple neck and a rosewood fingerboard.",
+    "price": 349.99,
+    "image": "https://example.com/images/electric-guitar.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Studio Microphone",
+    "description": "A professional-grade condenser microphone for recording vocals and instruments with clarity.",
+    "price": 149.99,
+    "image": "https://example.com/images/studio-microphone.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Bass Guitar",
+    "description": "A 4-string bass guitar with a classic design and smooth playability.",
+    "price": 399.99,
+    "image": "https://example.com/images/bass-guitar.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Violin",
+    "description": "A full-size violin with a bow and case included. Great for students and professionals.",
+    "price": 189.99,
+    "image": "https://example.com/images/violin.jpg"
+  },
+  {
+    "id": 8,
+    "title": "DJ Mixer",
+    "description": "A high-performance DJ mixer with multiple channels and customizable effects.",
+    "price": 259.99,
+    "image": "https://example.com/images/dj-mixer.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Guitar Amp",
+    "description": "A portable 15-watt guitar amplifier with great sound and durability.",
+    "price": 99.99,
+    "image": "https://example.com/images/guitar-amp.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Saxophone",
+    "description": "A brass alto saxophone with a rich sound and comfortable key action.",
+    "price": 549.99,
+    "image": "https://example.com/images/saxophone.jpg"
+  }
+]
